@@ -4,7 +4,7 @@ const axios = require('axios');
 const _ = require('lodash');
 const fs = require('fs');
 
-const port = process.env.POT || 8080;
+const port = process.env.PORT || 8080;
 
 var app = express();
 
