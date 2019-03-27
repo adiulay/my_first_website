@@ -41,12 +41,22 @@ hbs.registerHelper('css', () => {
 //     var time = new Date().toString();
 //     // console.log(`${time}: ${request.method} ${request.url}`);
 //     var log = `${time}: ${request.method} ${request.url}`;
-//     fs.appendFile('server.log', log + '\n', (error) => {
+//     fs.appendFile('server.log', log + '\n', (error) => { //fs.appendFile('filename', 'message', (callback) function
 //         if (error) {
 //             console.log('Unable to log message');
 //         }
 //     });
-//     next();
+//     next(); //middleware is requesting something, then responds something //next allows you to access anything else
+// });
+
+//READ THIS, IF YOU UNCOMMENT THIS PAGE, IT WILL LEAD YOU TO THE SITE DOWN
+// app.use((request, response) => {
+//     response.render('down_site.hbs', {
+//         title: 'Error Page',
+//         year: new Date().getFullYear(),
+//         header: 'The site is currently down for maintenance',
+//         company_name: 'JETAR GROUP'
+//     });
 // });
 
 app.get('/', (request, response) => {
@@ -56,15 +66,6 @@ app.get('/', (request, response) => {
         company_name: 'JETAR GROUP'
     })
 });
-
-//READ THIS, IF YOU UNCOMMENT THIS PAGE, IT WILL LEAD YOU TO THE SITE DOWN
-// app.use((request, response) => {
-//     response.render('down_site.hbs', {
-//         title: 'Error Page',
-//         year: new Date().getFullYear(),
-//         header: 'The site is currently down for maintenance'
-//     });
-// });
 
 // app.get('/', (request, response) => {
 //     response.send({
