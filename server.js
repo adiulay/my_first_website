@@ -91,7 +91,8 @@ app.get('/info', (request, response) => {
         title: 'About Jimmy',
         year: new Date().getFullYear(),
         welcome: 'Hello!',
-        header: 'About Page!'
+        header: 'About Page!',
+        company_name: 'JETAR GROUP'
     });
 });
 
